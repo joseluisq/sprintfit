@@ -1,0 +1,12 @@
+node_modules
+*.log
+node_modules
+coverage
+dist
+**/.DS_Store
+lib
+.cache
+/*.js
+/*.map
+/*.d.ts
+.*_cache
