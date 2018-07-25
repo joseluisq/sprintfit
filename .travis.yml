@@ -25,6 +25,5 @@ before_install:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
 
-before_script:
-  - "sudo chown root /usr/lib/chromium-browser/chrome-sandbox"
-  - "sudo chmod 4755 /usr/lib/chromium-browser/chrome-sandbox"
+install:
+  - yarn install
