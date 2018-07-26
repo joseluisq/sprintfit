@@ -2,7 +2,7 @@
   "name": "sprintfit",
   "description": "Small sprintf and vsprintf format specifier focused on strings.",
   "repository": "joseluisq/sprintfit",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "license": "MIT",
   "author": {
     "name": "José Luis Quintana",
