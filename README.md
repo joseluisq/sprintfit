@@ -41,7 +41,7 @@ sprintf('date: %s-%s-%s', 2018, 07, 25)
 
 ### vsprintf
 
-Operates as `vsprintf()` but accepts an array of arguments.
+Operates as `sprintf()` but accepts an array of arguments.
 
 ```js
 import { vsprintf } from 'sprintfit'

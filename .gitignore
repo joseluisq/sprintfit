@@ -10,3 +10,5 @@ lib
 /*.map
 /*.d.ts
 .*_cache
+!/*.config.js
+!/*.conf.js

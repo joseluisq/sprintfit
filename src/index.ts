@@ -1,36 +1,41 @@
-const chars = 's'
-
 /**
- * Return a formatted string and accepts a variable number of arguments.
+ * Return a formatted string using an array of arguments
  *
+ * @param args array of arguments
  * @returns a formatted string
  */
-export function sprintf (...args: any[]): string {
-  const len: number = args.length
-  const format: string = (args[0] || '').toString()
-  const argv: any[] = len > 0 ? new Array(len - 1) : []
+function sprintfv (args: any[]): string {
+  const argsLen: number = args.length
+  const formatv: string = (args[0] || '').toString()
+  const argv: any[] = []
+  const argvLen: number = argsLen > 0 ? argsLen - 1 : 0
 
-  // TODO: type specifier '%s' supported only
-  const formats = format.split(`%${chars}`)
+  // Notice: type specifier '%s' is only supported
+  const formats: string[] = formatv.split('%s')
+  const formatsLen: number = formats.length
 
-  if (formats.length <= 0) {
-    return format
+  if (formatsLen <= 0) {
+    return formatv
   }
 
-  const times = formats.length - 1
+  const formatLen: number = formatsLen - 1
 
-  if (times > argv.length) throw new Error('Too few arguments supplied.')
+  if (formatLen > argvLen) {
+    throw new Error('Too few arguments supplied.')
+  }
 
-  for (let i = 0; i < len - 1; ++i) {
-    argv[i] = (args[i + 1] || '').toString()
+  for (let i = 0; i < argsLen - 1; ++i) {
+    argv.push(
+      (args[i + 1] || '').toString()
+    )
   }
 
   let str = ''
 
-  for (let i = 0; i < formats.length; i++) {
+  for (let i = 0; i < formatsLen; i++) {
     str += formats[i] || ''
 
-    if (i < times) {
+    if (i < formatLen) {
       str += argv[i] || ''
     }
   }
@@ -38,4 +43,23 @@ export function sprintf (...args: any[]): string {
   return str
 }
 
-export default sprintf
+/**
+ * Return a formatted string and accepts a variable number of arguments
+ * whose first argument correspond to string format
+ *
+ * @returns a formatted string
+ */
+export function sprintf (...args: any[]): string {
+  return sprintfv(args)
+}
+
+/**
+ * Operates as `sprintf()` but accepts an array of arguments
+ *
+ * @param format string format
+ * @param argsv an array of arguments
+ * @returns a formatted string
+ */
+export function vsprintf (format: any = '', argsv: any[] = []): string {
+  return sprintfv([ format ].concat(argsv))
+}
