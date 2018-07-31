@@ -25,21 +25,28 @@
     "utilities"
   ],
   "devDependencies": {
+    "@types/benchmark": "^1.0.31",
     "@types/jasmine": "^2.8.8",
-    "@types/node": "^10.5.3",
+    "@types/node": "^10.5.4",
+    "@types/sprintf-js": "^1.1.0",
+    "benchmark": "^2.1.4",
     "jasmine": "^3.1.0",
     "jasmine-core": "^3.1.0",
     "jasmine-spec-reporter": "^4.2.1",
     "karma": "^2.0.5",
+    "karma-benchmark-reporter": "^0.1.1",
     "karma-chrome-launcher": "^2.2.0",
     "karma-jasmine": "^1.1.2",
     "karma-jasmine-html-reporter": "^1.2.0",
     "karma-spec-reporter": "^0.0.32",
     "karma-typescript": "^3.0.13",
+    "printj": "^1.1.2",
     "rollup": "^0.63.4",
     "rollup-plugin-terser": "^1.0.1",
     "rollup-plugin-typescript2": "^0.16.1",
+    "sprintf-js": "^1.1.1",
     "terser": "^3.8.1",
+    "ts-node": "^7.0.0",
     "tslint": "^5.11.0",
     "tslint-config-standard-plus": "^2.0.0",
     "typescript": "^2.9.2"
@@ -54,6 +61,7 @@
     "clean": "rm -rf dist",
     "test": "npm run lint && karma start --single-run --reporters spec",
     "test:watch": "env NODE_ENV=debug karma start",
+    "benchmark": "env NODE_ENV=development node benchmark.js",
     "lint": "tslint --format stylish --project tsconfig.json"
   }
 }
