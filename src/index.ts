@@ -61,5 +61,7 @@ export function sprintf (...args: any[]): string {
  * @returns a formatted string
  */
 export function vsprintf (format: any = '', argsv: any[] = []): string {
-  return sprintfv([ format ].concat(argsv))
+  const args = [ format ]
+  Array.prototype.push.apply(args, argsv)
+  return sprintfv(args)
 }
