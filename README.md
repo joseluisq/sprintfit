@@ -54,8 +54,8 @@ vsprintf('date: %s-%s-%s', [ 2018, 07, 28 ])
 
 - Node: `v8.11.3`
 - [BenchmarkJS](https://benchmarkjs.com): `^2.1.4`
-- [Sprintf-js](2): `^1.1.1`
-- [Printj](3): `^1.1.2`
+- [Sprintf-js][2]: `^1.1.1`
+- [Printj][3]: `^1.1.2`
 
 ```sh
 yarn benchmark
@@ -65,9 +65,9 @@ yarn benchmark
 
 | package | ops/sec | rme
 --- | --- | ---
-[Sprintfit](1) | __2,601,688__ | ±5.19% (77 runs sampled)
-[SprintfJS](2) | 1,117,038 | ±1.66% (60 runs sampled)
-[PrintJ](3) | 1,046,954 | ±2.78% (91 runs sampled)
+[Sprintfit][1] | __2,601,688__ | ±5.19% (77 runs sampled)
+[SprintfJS][2] | 1,117,038 | ±1.66% (60 runs sampled)
+[PrintJ][3] | 1,046,954 | ±2.78% (91 runs sampled)
 
 _Done in 18.00s._
 
@@ -75,9 +75,9 @@ _Done in 18.00s._
 
 | package | ops/sec | rme
 --- | --- | ---
-[Sprintfit](1) | __2,774,358__ | ±4.03%  (79 runs sampled)
-[PrintJ](3) | 905,327 | ±3.64% (79 runs sampled)
-[SprintfJS](2) | 675,621 | ±7.06% (63 runs sampled)
+[Sprintfit][1] | __2,774,358__ | ±4.03%  (79 runs sampled)
+[PrintJ][3] | 905,327 | ±3.64% (79 runs sampled)
+[SprintfJS][2] | 675,621 | ±7.06% (63 runs sampled)
 
 _Done in 18.34s._
 
