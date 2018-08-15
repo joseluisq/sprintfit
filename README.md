@@ -1,6 +1,6 @@
 # Sprintfit [![Build Status](https://travis-ci.org/joseluisq/sprintfit.svg?branch=master)](https://travis-ci.org/joseluisq/sprintfit) [![npm](https://img.shields.io/npm/v/sprintfit.svg)](https://www.npmjs.com/package/sprintfit) [![npm](https://img.shields.io/npm/dt/sprintfit.svg)](https://www.npmjs.com/package/sprintfit) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-> Small sprintf and vsprintf format specifier focused on strings. :zap:
+> Small (450bytes) and [fast](https://jsbench.me/wgjkuw5xly/1) sprintf and vsprintf format specifier focused on strings. :zap:
 
 *__:information_source: Notice:__ `sprintf` and `vsprintf` will treat their arguments as strings only. If you are looking for the full specification you could try [sprintf.js](https://github.com/alexei/sprintf.js) or [printj](https://github.com/SheetJS/printj).*
 
@@ -60,6 +60,8 @@ vsprintf('date: %s-%s-%s', [ 2018, 07, 28 ])
 ```sh
 yarn benchmark
 ```
+
+:rocket: Try [beanchmark online](https://jsbench.me/wgjkuw5xly/1)
 
 #### sprintf
 
