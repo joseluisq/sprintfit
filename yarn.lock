@@ -2908,9 +2908,9 @@ preserve@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
 
-printj@1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/printj/-/printj-1.1.2.tgz#d90deb2975a8b9f600fb3a1c94e3f4c53c78a222"
+printj@1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/printj/-/printj-1.2.1.tgz#67bdc1be9958c0690d5c35e2ba8ff70ceaac26bf"
 
 process-nextick-args@~1.0.6:
   version "1.0.7"
