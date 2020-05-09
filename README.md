@@ -1,8 +1,8 @@
-# Sprintfit [![Build Status](https://travis-ci.org/joseluisq/sprintfit.svg?branch=master)](https://travis-ci.org/joseluisq/sprintfit) [![npm](https://img.shields.io/npm/v/sprintfit.svg)](https://www.npmjs.com/package/sprintfit) [![npm](https://img.shields.io/npm/dt/sprintfit.svg)](https://www.npmjs.com/package/sprintfit) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+# Sprintfit [![Build Status](https://travis-ci.com/joseluisq/sprintfit.svg?branch=master)](https://travis-ci.com/joseluisq/sprintfit) [![npm](https://img.shields.io/npm/v/sprintfit.svg)](https://www.npmjs.com/package/sprintfit) [![npm](https://img.shields.io/npm/dt/sprintfit.svg)](https://www.npmjs.com/package/sprintfit) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-> Small (450bytes) and [fast](https://jsbench.me/wgjkuw5xly/1) sprintf and vsprintf format specifier focused on strings. :zap:
+> A [fast](https://jsbench.me/wgjkuw5xly/1) 450b sprintf & vsprintf format specifier focused on strings with no dependencies. :zap:
 
-*__:information_source: Notice:__ `sprintf` and `vsprintf` will treat their arguments as strings only. If you are looking for the full specification you could try [sprintf.js](https://github.com/alexei/sprintf.js) or [printj](https://github.com/SheetJS/printj).*
+*__Note:__ `sprintf` and `vsprintf` will treat their arguments as strings only. If you are looking for the full specification you could try [sprintf.js](https://github.com/alexei/sprintf.js) or [printj](https://github.com/SheetJS/printj).*
 
 ## Install
 
@@ -50,7 +50,7 @@ vsprintf('date: %s-%s-%s', [ 2018, 07, 28 ])
 // date: 2018-07-28
 ```
 
-### Benchmarks
+## Benchmarks
 
 - Node: `v8.11.3`
 - [BenchmarkJS](https://benchmarkjs.com): `^2.1.4`
@@ -58,6 +58,7 @@ vsprintf('date: %s-%s-%s', [ 2018, 07, 28 ])
 - [Printj][3]: `^1.1.2`
 
 ```sh
+yarn build
 yarn benchmark
 ```
 
@@ -87,6 +88,28 @@ _Done in 18.34s._
 [2]: https://github.com/alexei/sprintf.js
 [3]: https://github.com/SheetJS/printj
 
+#### Node v12
+
+Node: `v12.16.1`
+
+```sh
+# sprintf
+1) Sprintfit: sprintf() x 2,041,472 ops/sec ±3.13% (83 runs sampled)
+2) SprintfJS: sprintf() x 915,427 ops/sec ±2.79% (84 runs sampled)
+3) PrintJ: sprintf() x 1,114,252 ops/sec ±3.55% (79 runs sampled)
+
+Fastest is 1) Sprintfit: sprintf()
+
+# vsprintf
+1) Sprintfit: vsprintf() x 2,281,271 ops/sec ±0.52% (91 runs sampled)
+2) SprintfJS: vsprintf() x 704,705 ops/sec ±2.24% (84 runs sampled)
+3) PrintJ: vsprintf() x 1,193,415 ops/sec ±2.13% (83 runs sampled)
+
+Fastest is 1) Sprintfit: vsprintf()
+
+Done in 36.05s.
+```
+
 ## Contributions
 
 Feel free to send some [Pull request](https://github.com/joseluisq/sprintfit/pulls) or [issue](https://github.com/joseluisq/sprintfit/issues).
@@ -94,4 +117,4 @@ Feel free to send some [Pull request](https://github.com/joseluisq/sprintfit/pul
 ## License
 MIT license
 
-© 2018 [José Luis Quintana](http://git.io/joseluisq)
+© 2018-present [Jose Quintana](http://git.io/joseluisq)
